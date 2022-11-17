@@ -34,4 +34,5 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & 
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use 'tpope/vim-abolish'
 end)
