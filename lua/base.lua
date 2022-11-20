@@ -14,6 +14,8 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20'
 vim.opt.showmode = false
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
 
 vim.opt.title = true
 vim.opt.autoindent = true
