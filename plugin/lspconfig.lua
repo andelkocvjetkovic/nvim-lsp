@@ -67,7 +67,12 @@ nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
-  capabilities = capabilities
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = "non-relative"
+    }
+  }
 }
 
 nvim_lsp.sourcekit.setup {
