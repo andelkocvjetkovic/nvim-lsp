@@ -58,10 +58,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
+-- nvim_lsp.flow.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities
+-- }
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
@@ -97,13 +97,18 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
---nvim_lsp.tailwindcss.setup {}
+-- nvim_lsp.tailwindcss.setup {}
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 nvim_lsp.cssls.setup{
   capabilities = capabilities,
   on_attach = on_attach,
   cmd = { "vscode-css-language-server", "--stdio" },
-  filetypes = { "css", "scss", "less" }
+  filetypes = { "css", "scss", "less" },
+}
+
+nvim_lsp.cssmodules_ls.setup {
+    -- provide your on_attach to bind keymappings
+    on_attach = on_attach,
 }
 
 
