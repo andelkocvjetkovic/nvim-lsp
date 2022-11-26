@@ -1,4 +1,3 @@
-local tsconfig = require('tsconfig');
 vim.cmd("autocmd!")
 
 vim.scriptencoding = 'utf-8'
@@ -18,10 +17,6 @@ vim.opt.showmode = false
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
 vim.opt.isfname:append('@-@')
-vim.opt.suffixesadd= {'.js','.jsx','.ts','.tsx','.d.ts', '.scss' }
-vim.opt.includeexpr = 'luaeval("require\'tsconfig\'.includeexpr(_A)",v:fname)'
--- vim.opt_local.suffixesadd= {'.js','.jsx','.ts','.tsx','.d.ts', '.scss' }
--- vim.opt_local.includeexpr = 'luaeval("require\'tsconfig\'.includeexpr(_A)",v:fname)'
 
 vim.opt.title = true
 vim.opt.autoindent = true
