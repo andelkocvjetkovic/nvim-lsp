@@ -108,7 +108,11 @@ nvim_lsp.cssls.setup{
 
 nvim_lsp.cssmodules_ls.setup {
     -- provide your on_attach to bind keymappings
-    on_attach = on_attach,
+     on_attach = function (client,bufnr)
+        -- avoid accepting `definitionProvider` responses from this LSP
+        client.server_capabilities.definitionProvider = false
+        on_attach(client,bufnr)
+    end,
 }
 
 
