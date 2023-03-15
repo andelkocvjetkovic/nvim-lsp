@@ -106,14 +106,14 @@ nvim_lsp.cssls.setup{
   filetypes = { "css", "scss", "less" },
 }
 
-nvim_lsp.cssmodules_ls.setup {
+--nvim_lsp.cssmodules_ls.setup {
     -- provide your on_attach to bind keymappings
-     on_attach = function (client,bufnr)
+ --    on_attach = function (client,bufnr)
         -- avoid accepting `definitionProvider` responses from this LSP
-        client.server_capabilities.definitionProvider = false
-        on_attach(client,bufnr)
-    end,
-}
+ --       client.server_capabilities.definitionProvider = false
+  --      on_attach(client,bufnr)
+   -- end,
+--}
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

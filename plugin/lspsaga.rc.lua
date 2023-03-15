@@ -5,6 +5,12 @@ saga.setup({
   server_filetype_map = {
     typescript = {'typescript'},
     cssls = {'scss','css','less'},
+  },
+  symbol_in_winbar = {
+    enable = false
+  },
+  lightbulb = {
+    enable = true
   }
 })
 
