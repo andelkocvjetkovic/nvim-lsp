@@ -36,4 +36,5 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'tpope/vim-abolish'
   use 'tpope/vim-fugitive'
+  use 'github/copilot.vim'
 end)
