@@ -99,21 +99,20 @@ nvim_lsp.sumneko_lua.setup {
 
 -- nvim_lsp.tailwindcss.setup {}
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-nvim_lsp.cssls.setup{
+nvim_lsp.cssls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
   cmd = { "vscode-css-language-server", "--stdio" },
   filetypes = { "css", "scss", "less" },
 }
 
---nvim_lsp.cssmodules_ls.setup {
-    -- provide your on_attach to bind keymappings
- --    on_attach = function (client,bufnr)
-        -- avoid accepting `definitionProvider` responses from this LSP
- --       client.server_capabilities.definitionProvider = false
-  --      on_attach(client,bufnr)
-   -- end,
---}
+nvim_lsp.cssmodules_ls.setup {
+  on_attach = function(client, bufnr)
+    -- avoid accepting `definitionProvider` responses from this LSP
+    client.server_capabilities.definitionProvider = false
+    on_attach(client, bufnr)
+  end,
+}
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

@@ -5,10 +5,9 @@ local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
 null_ls.setup {
   sources = {
-    null_ls.builtins.diagnostics.eslint_d.with({
+    null_ls.builtins.diagnostics.eslint.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
-    null_ls.builtins.diagnostics.fish,
     null_ls.builtins.diagnostics.stylelint,
   },
   on_attach = function(client, bufnr)
