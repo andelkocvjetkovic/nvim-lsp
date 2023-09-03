@@ -79,7 +79,7 @@ nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -97,7 +97,9 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
--- nvim_lsp.tailwindcss.setup {}
+nvim_lsp.tailwindcss.setup {}
+
+--[[
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 nvim_lsp.cssls.setup {
   capabilities = capabilities,
@@ -113,6 +115,7 @@ nvim_lsp.cssmodules_ls.setup {
     on_attach(client, bufnr)
   end,
 }
+--]]
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
