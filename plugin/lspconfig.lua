@@ -98,6 +98,7 @@ nvim_lsp.lua_ls.setup {
 }
 
 nvim_lsp.tailwindcss.setup {}
+nvim_lsp.prismals.setup {}
 
 --[[
 capabilities.textDocument.completion.completionItem.snippetSupport = true

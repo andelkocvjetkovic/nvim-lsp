@@ -21,7 +21,8 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    'prisma'
   },
   autotag = {
     enable = true,
