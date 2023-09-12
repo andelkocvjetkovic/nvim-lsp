@@ -14,7 +14,10 @@ saga.setup({
     virtual_text = false
   },
   finder= {
-    default= 'imp+ref'
+    default= 'def+ref',
+    methods = {
+      def = 'textDocument/definition',
+    }
   }
 })
 
