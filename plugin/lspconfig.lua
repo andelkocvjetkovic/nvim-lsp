@@ -19,10 +19,10 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  -- buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  -- buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  -- buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
 protocol.CompletionItemKind = {
@@ -97,10 +97,9 @@ nvim_lsp.lua_ls.setup {
   },
 }
 
-nvim_lsp.tailwindcss.setup {}
-nvim_lsp.prismals.setup {}
+-- nvim_lsp.tailwindcss.setup {}
+ nvim_lsp.prismals.setup {}
 
---[[
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 nvim_lsp.cssls.setup {
   capabilities = capabilities,
@@ -116,7 +115,6 @@ nvim_lsp.cssmodules_ls.setup {
     on_attach(client, bufnr)
   end,
 }
---]]
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
