@@ -10,4 +10,3 @@ mason.setup({
 lspconfig.setup {
 
 }
-require'lspconfig'.tailwindcss.setup{}

@@ -97,8 +97,20 @@ nvim_lsp.lua_ls.setup {
   },
 }
 
--- nvim_lsp.tailwindcss.setup {}
- nvim_lsp.prismals.setup {}
+nvim_lsp.tailwindcss.setup {
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        classRegex = {
+          { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+          { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" }
+        },
+      },
+    },
+  },
+}
+
+-- nvim_lsp.prismals.setup {}
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 nvim_lsp.cssls.setup {
