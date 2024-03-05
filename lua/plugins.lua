@@ -37,4 +37,5 @@ packer.startup(function(use)
   use 'tpope/vim-abolish'
   use 'tpope/vim-fugitive'
   use 'github/copilot.vim'
+  use 'christoomey/vim-tmux-navigator'
 end)
